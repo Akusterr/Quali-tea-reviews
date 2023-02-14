@@ -7,7 +7,8 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Reviews from './components/Reviews';
 import Profile from './components/Profile';
-import Tea from './components/Tea';
+import TeaPage from "./components/TeaPage";
+import Registration from "./components/Registration";
 
 
 function App() {
@@ -19,9 +20,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route index element={<Home />} />
-          <Route path="tea" element={<Tea />} />
+          <Route path="tea" element={<TeaPage />} />
           <Route path="profile" element={<Profile />} />
           <Route path="reviews" element={<Reviews />} />
+          <Route path="registration" element={<Registration />} />
         </Route>
       </Routes>
     </Router>

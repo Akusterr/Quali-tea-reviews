@@ -1,0 +1,11 @@
+
+.nav {
+    text-align: center; 
+    margin: 1rem 2rem;
+    font-size: 1.5em;
+    border-bottom: 2px solid whitesmoke;
+    transition: 0.1s;
+    color: grey;
+    border-bottom: 2px solid;
+    list-style: none;
+}

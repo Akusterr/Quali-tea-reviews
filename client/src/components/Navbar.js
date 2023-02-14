@@ -1,5 +1,5 @@
 import React from 'react';
-// import "./styles/Home.css";
+import "./styles/Navbar.css";
 import { Outlet, Link } from "react-router-dom";
 
 
@@ -8,20 +8,24 @@ function Navbar() {
     return (
     <>
       <nav>
-        <ul>
-          <li>
+        <div className="nav">
+          <div>
             <Link to="/">Home</Link>
-          </li>
-          <li>
+          </div> 
+          
+          <div>
             <Link to="/tea">Teas</Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link to="/profile">Profile</Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link to="/reviews">Reviews</Link>
-          </li>
-        </ul>
+          </div>
+          <div>
+            <Link to="/registration">Registration</Link>
+          </div>
+        </div>
       </nav>
 
       <Outlet />

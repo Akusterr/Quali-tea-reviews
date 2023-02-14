@@ -1,3 +1,3 @@
 class TeaSerializer < ActiveModel::Serializer
-  attributes :id, :brand, :type, :origin, :image
+  attributes :id, :brand, :style, :origin, :image
 end

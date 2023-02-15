@@ -1,5 +1,11 @@
 
 .tea-text {
     text-align: center;
-
+    font-family: "Kalam", cursive;
 }
+
+.tea-form {
+    box-sizing: border-box;
+        display: flex;
+}
+

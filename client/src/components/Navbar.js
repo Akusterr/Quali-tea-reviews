@@ -12,12 +12,8 @@ function Navbar() {
           <div>
             <Link to="/">Home</Link>
           </div> 
-          
           <div>
             <Link to="/tea">Teas</Link>
-          </div>
-          <div>
-            <Link to="/profile">Profile</Link>
           </div>
           <div>
             <Link to="/reviews">Reviews</Link>

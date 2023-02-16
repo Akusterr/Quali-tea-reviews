@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import "./styles/LoginForm.css";
+import { Link } from 'react-router-dom'
 
 function LoginForm() {
+  const [login, setLogin] = useState(null)
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
 
@@ -11,7 +14,7 @@ function LoginForm() {
       password: password
     }
 
-    fetch("http://localhost:4000/login", {
+    fetch("/login", {
     method: "POST",
     headers: {
       "Content-Type": 'application/json',
@@ -19,17 +22,23 @@ function LoginForm() {
     body: JSON.stringify(userLogin)
   })
       .then(resp => resp.json())
-      .then(user =>  addPerson(user))
+      .then(user => addPerson(user))
+      
   }
 
-  const addPerson = () => {
-    window.location.href = "http://localhost:4000/home"
-    
+  const addPerson = (user) => {
+    setLogin(user)
+    window.location.href = 'http://localhost:4000/home'
   }
+
+
+
+  // window.location.href = "http://localhost:4000/home"
  
 
   return (
-   <div>
+   <div className="Login-wrapper">
+    <h1>Login</h1>
     <form onSubmit={handleSubmit}>
       <div>
             <label htmlFor="username">Username</label>
@@ -55,6 +64,12 @@ function LoginForm() {
           </div>
           <button type="submit">Login</button>
     </form>
+    <br/>
+          <div>
+            Don't have an account yet? <Link exact to='/registration'>Sign up now!</Link>
+          </div>
+
+          {/* <h1>Hi, {login.username}</h1> */}
    </div>
   );
 }

@@ -1,5 +1,4 @@
 
-require 'pp'
 class ApplicationController < ActionController::API
     include ActionController::Cookies
 
@@ -9,13 +8,10 @@ class ApplicationController < ActionController::API
     private
 
     def authorize
-        @current_user = User.find_by(id: session[:user_id]) 
-        if !@current_user
-            render json: {errors: "Not authorized, please log in"}
-        else
-            pp @current_user
-            render json: @current_user
-        end
+        @current_user = User.find_by(id: session[:user_id])
+        render json: {errors: ["Not Authorized, please login"]}, status: :unauthorized unless @current_user
     end
 
 end
+
+

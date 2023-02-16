@@ -54,14 +54,16 @@ function TeaPage() {
 
   return (
     <div className="tea-text">
-      <h1>Teas!!</h1>
+      <h1> *USER* Teas</h1>
       <TeaList userTea={userTea}/>
+      <h2>Add a Tea</h2>
 
       <form onSubmit={handleSubmit}className="tea-form">
         <input type="text" name="brand" placeholder="Brand name" value={brand} onChange={(e) => setBrand(e.target.value)} />
         <input type="text" name="style" placeholder="Style of tea" value={style} onChange={(e) => setStyle(e.target.value)} />
         <input type="text" name="origin" placeholder="Origin of company" value={origin} onChange={(e) => setOrigin(e.target.value)}/>
         <input type="text" name="image" placeholder="Image URL" value={image} onChange={(e) => setImage(e.target.value)} />
+        <br />
         <button type="submit">Add a new TEA</button>
       </form>
 

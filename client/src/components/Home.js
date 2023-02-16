@@ -10,6 +10,7 @@ function Home() {
     <div className='home-wrapper'>
         <div className='home-content'>
             <h1>Quali-tea Reviews</h1>
+            <h2>welcome! *USER*</h2>
         </div>
     </div>
   );

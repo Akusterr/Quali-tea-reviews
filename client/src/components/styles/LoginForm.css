@@ -1,0 +1,13 @@
+
+
+.Login-wrapper {
+    box-sizing: border-box;
+    font-family: "Kalam", cursive;
+    align-items: center;
+    padding: 40px;
+    min-height: 50px;
+    width: 100%;
+    border-radius: 20px;
+    color: burlywood;
+    background-color: grey;
+}

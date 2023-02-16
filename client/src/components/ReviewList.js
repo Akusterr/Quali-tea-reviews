@@ -12,6 +12,7 @@ function ReviewList({ userReview }) {
             <Reviewcard key={UR.id} UR={UR}/>
         ))}
     </div>
+ 
   );
 }
 

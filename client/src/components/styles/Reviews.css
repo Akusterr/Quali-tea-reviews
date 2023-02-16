@@ -1,5 +1,14 @@
 
 .rev-text {
     text-align: center;
+    color: burlywood;
+    background-color: grey;
+    border-radius: 15px;
     font-family: "Kalam", cursive;
+    font-size: 15px;
+
+}
+
+.form {
+    border-radius: 40px;
 }

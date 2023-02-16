@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./styles/Teacard.css";
+import { Link } from 'react-router-dom'
 
 function Teacard( {UT} ) {
   const [herbal, setHerbal] = useState(true)
@@ -13,15 +14,24 @@ function Teacard( {UT} ) {
   
     <div className="card">
       <img src={UT.image} alt={UT.name} className={"teaImg"} />
-      <h1> <br /> {UT.brand}</h1>
+      <h1>{UT.brand}</h1>
       <h3>{UT.style}</h3>
-      <h3>Origin: <br /> {UT.origin}</h3>
+      <h3>Origin: {UT.origin}</h3>
        {herbal ? (
-        <button onClick={handleHerbal} className="primary">Herbal</button>
+        <button onClick={handleHerbal} className="primary">Stocked</button>
       ) : (
-        <button onClick={handleHerbal}>Caffeinated</button>
+        <button onClick={handleHerbal}>Order more!</button>
       )}
-      <p>Reviews:</p>
+      <br />
+
+      <div>
+        <Link exact to='/reviews'><button>Write a review</button></Link>
+      </div>
+      
+
+
+
+      <p>Current Reviews:</p>
       <div>
           {UT.reviews.map(review => {
           return <ul>{review.tea_comment}</ul>

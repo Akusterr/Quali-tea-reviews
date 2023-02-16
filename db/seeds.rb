@@ -12,21 +12,28 @@ u1 = User.create(
     name: "Alexa", 
     location: "New Jersey", 
     image: "https://t3.ftcdn.net/jpg/02/85/26/36/360_F_285263603_ATuaGwXIW70XGyWdcaGzbpYCJaB2e04f.jpg",
-    username: "kus"
+    username: "Lex",
+    password: "alexa",
+    email: "alexa@teamail.com"
 )
 
 u2 = User.create(
     name: "Jerica",
     location: "California",
     image: "https://twosleevers.com/wp-content/uploads/2017/05/Hibiscus-Tea-Wide.jpg",
-    username: "jer"
+    username: "Jer",
+    password: "jerica",
+    email: "jerica@teamail.com"
 )
 
 u3 = User.create(
     name: "Caity",
     location: "Massachusetts",
     image: "https://cdn.create.vista.com/api/media/small/222785650/stock-photo-flat-lay-arranged-cinnamon-sticks", 
-    username: "murph"
+    username: "Murph",
+    password: "caity",
+    email: "caity@teamail.com"
+
 )
 
 

@@ -8,9 +8,17 @@ import Navbar from './components/Navbar';
 import Reviews from './components/Reviews';
 import TeaPage from "./components/TeaPage";
 import Registration from "./components/Registration";
+import LoginForm from "./components/LoginForm";
 
 
 function App() {
+  // const [user, setUser] = useState(null)
+
+  // useEffect(() => {
+  //   fetch("/me")
+  //   .then(resp => resp.json())
+  //   .then(setUser)
+  // }, [])
 
 
   return (
@@ -22,6 +30,7 @@ function App() {
           <Route path="tea" element={<TeaPage />} />
           <Route path="reviews" element={<Reviews />} />
           <Route path="registration" element={<Registration />} />
+          <Route path="LoginForm" element={<LoginForm />} />
         </Route>
       </Routes>
     </Router>

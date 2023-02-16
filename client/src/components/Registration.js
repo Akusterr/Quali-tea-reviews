@@ -1,37 +1,71 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 
 function Registration() {
+  const [userName, setUserName] = useState("")
+  const [userEmail, setUserEmail] = useState("")
+  const [userPassword, setUserPassword] = useState("")
+  const [userLocation, setUserLocation] = useState("")
+  const [userImage, setUserImage] = useState("")
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(e)
+
+    let info = {
+      username: userName,
+      email: userEmail,
+      password: userPassword,
+      location: userLocation,
+      image: userImage
+    }
+
+ fetch(`http://localhost:4000/signup`, {
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(info)
+        })
+
+        .then(resp => resp.json())
+        .then(console.log)
+          
+      
+    }
+
+   
+  
+
 
 
   return (
-    <div className="">
+    <div className="reg-form-wrapper">
 
 
-      <form className="registerForm">
-        <div className="register-form">
+      <form onSubmit={handleSubmit} className="registerForm">
+        <div>
           <h3>Create Your Account</h3>
 
           <div>
-            <label htmlFor="firstName">Name</label>
+            <label htmlFor="userName">Username</label>
             <input
               className="text-box-reg"
               type="text"
-              name="name"
-              id="name"
-              // value={firstName}
-              // onChange={(e) => setFirstName(e.target.value)}
+              name="userName"
+              id="userName"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
             />
           </div>
           <div>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="email">email</label>
             <input
               className="text-box-reg"
               type="text"
-              name="username"
-              id="username"
-              // value={username}
-              // onChange={(e) => setUsername(e.target.value)}
+              name="email"
+              id="email"
+              value={userEmail}
+              onChange={(e) => setUserEmail(e.target.value)}
             />
           </div>
           <div>
@@ -41,8 +75,19 @@ function Registration() {
               type="password"
               name="password"
               id="password"
-              // value={password}
-              // onChange={(e) => setPassword(e.target.value)}
+              value={userPassword}
+              onChange={(e) => setUserPassword(e.target.value)}
+            />
+          </div>
+          <div>
+            <label htmlFor="location">Location</label>
+            <input
+              className="text-box-reg"
+              type="location"
+              name="location"
+              id="location"
+              value={userLocation}
+              onChange={(e) => setUserLocation(e.target.value)}
             />
           </div>
           <div>
@@ -52,17 +97,19 @@ function Registration() {
               type="text"
               name="image"
               id="imageURL"
-              // value={profilePicture}
-              // onChange={(e) => setProfilePicture(e.target.value)}
+              value={userImage}
+              onChange={(e) => setUserImage(e.target.value)}
             />
           </div>
-          <button className="login-button" type="submit">
+
+          <button className="register-button" type="submit">
             Register
           </button>
+
           <div className="link-li">
             <h2>Already registered?</h2>
 
-            {/* link to login here!! */}
+            {/* PUT LINK TO LOGIN FORM HERE!!! */}
             {/* <Link to="/Login">Already have an account?</Link> */}
           </div>
         </div>

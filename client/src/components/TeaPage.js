@@ -57,7 +57,7 @@ function TeaPage() {
       <h1>Teas!!</h1>
       <TeaList userTea={userTea}/>
 
-       <form onSubmit={handleSubmit}className="tea-form">
+      <form onSubmit={handleSubmit}className="tea-form">
         <input type="text" name="brand" placeholder="Brand name" value={brand} onChange={(e) => setBrand(e.target.value)} />
         <input type="text" name="style" placeholder="Style of tea" value={style} onChange={(e) => setStyle(e.target.value)} />
         <input type="text" name="origin" placeholder="Origin of company" value={origin} onChange={(e) => setOrigin(e.target.value)}/>

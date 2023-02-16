@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
     def create
         user = User.create!(user_params)
-        session[:user_id] = user.id
+        # session[:user_id] = user.id
         render json: user, status: :created
     end
 
@@ -41,10 +41,6 @@ class UsersController < ApplicationController
 
     def not_found
         render json: { error: "User not found" }, status: :not_found
-    end
-
-    def invalid(error)
-        render json: { error: error.message }, status: 422
     end
 
     def authorize

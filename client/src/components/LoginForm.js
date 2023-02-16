@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
 function LoginForm() {
-  const [email, setEmail] = useState("")
+  const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault()
     let userLogin = {
-      email: email,
+      username: username,
       password: password
     }
 
@@ -23,6 +23,7 @@ function LoginForm() {
   }
 
   const addPerson = () => {
+    window.location.href = "http://localhost:4000/home"
     
   }
  
@@ -31,14 +32,14 @@ function LoginForm() {
    <div>
     <form onSubmit={handleSubmit}>
       <div>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="username">Username</label>
             <input
               className="text-box-reg"
-              type="email"
-              name="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="username"
+              name="username"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div>

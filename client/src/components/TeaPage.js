@@ -23,8 +23,6 @@ function TeaPage() {
     setUserTea(teas)
   }
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault()
   
@@ -50,11 +48,9 @@ function TeaPage() {
 
 
 
-
-
   return (
     <div className="tea-text">
-      <h1> *USER* Teas</h1>
+      <h1>Teas</h1>
       <TeaList userTea={userTea}/>
       <h2>Add a Tea</h2>
 

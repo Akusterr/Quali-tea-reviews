@@ -1,15 +1,14 @@
 
 import React from "react";
 import Reviewcard from "./Reviewcard";
-import Reviews from "./Reviews";
 
-function ReviewList({ userReview }) {
+function ReviewList({ userReviews, onUser, updateUserReviews }) {
  
 
   return (
     <div>
-        {userReview.map(UR => (
-            <Reviewcard key={UR.id} UR={UR}/>
+        {userReviews.map(UR => (
+            <Reviewcard key={UR.id} UR={UR} onUser={onUser} updateUserReviews={updateUserReviews} />
         ))}
     </div>
  

@@ -18,6 +18,18 @@ skip_before_action :authorize, only: :create
        render json: user, status: :created
     end
 
+    def update 
+        user = User.find(params[:id])
+        user.update!(user_params)
+        render json: user, status: :accepted
+    end
+
+    def destroy
+        user = User.find(params[:id])
+        user.destroy
+        render json: {}, status: :ok
+    end
+
 
     private
     def user_params

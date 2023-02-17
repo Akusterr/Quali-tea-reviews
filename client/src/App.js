@@ -9,6 +9,8 @@ import Reviews from './components/Reviews';
 import TeaPage from "./components/TeaPage";
 import Registration from "./components/Registration";
 import LoginForm from "./components/LoginForm"
+import Profile from "./components/Profile"
+import TeaDetailsPage from "./components/TeaDetailsPage";
 
 
 function App() {
@@ -36,8 +38,10 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Navbar onUser={onUser} setOnUser={setOnUser} />}>
           <Route index element={<LoginForm onUser={onUser} setOnUser={setOnUser} />} />
-          <Route path="tea" element={<TeaPage />} />
-          <Route path="reviews" element={<Reviews />} />
+          <Route path="teas" element={<TeaPage />} />
+          <Route path="teas/:id" element={<TeaDetailsPage onUser={onUser} />} />
+          <Route path="reviews" element={<Reviews onUser={onUser}/>} />
+          <Route path="profile" element={<Profile onUser={onUser}/>} />
           <Route path="registration" element={<Registration onUser={onUser} setOnUser={setOnUser}/>} />
           <Route path="home" element={<Home />} />
         </Route>

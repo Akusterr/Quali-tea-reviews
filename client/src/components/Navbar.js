@@ -12,6 +12,7 @@ function Navbar({ onUser, setOnUser }) {
         }).then((resp => {
             if (resp.ok){
                 setOnUser(null)
+                window.location.href = "http://localhost:4000/"
             }
         }))
     }
@@ -26,7 +27,10 @@ function Navbar({ onUser, setOnUser }) {
           <Link to="/home">Home</Link>
         </div>
         <div>
-          <Link to="/tea">Teas</Link>
+          <Link to="/profile">Profile</Link>
+        </div>
+        <div>
+          <Link to="/teas">Teas</Link>
         </div>
         <div>
           <Link to="/reviews">Reviews</Link>

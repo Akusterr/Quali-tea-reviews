@@ -1,23 +1,17 @@
 
-.home-wrapper {
+
+.profile {
     background-image: url("../pictures/flowercup.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 86vh;
-    display: flex; 
-    justify-content: center;
+    box-sizing: border-box;
     font-family: "Kalam", cursive;
-    border-radius: 40px;
-}
-
-.home-content {
+    align-items: center;
+    padding: 40px;
+     min-height: 50px;
+     width: 100%;
+    border-radius: 20px;
     color: whitesmoke;
-    font-size: 27px; 
-}
-
-.cuteNote {
-    color: whitesmoke;
-    font-size: 27px;
-
+     background-color: grey;
 }

@@ -1,5 +1,6 @@
 class TeasController < ApplicationController
 
+    require "pry"
     rescue_from ActiveRecord::RecordNotFound, with: :not_found
     rescue_from ActiveRecord::RecordInvalid, with: :invalid
 
@@ -15,6 +16,7 @@ class TeasController < ApplicationController
     end
 
     def create 
+        byebug
         tea = Tea.create!(tea_params)
         render json: tea, status: :created
     end

@@ -12,7 +12,6 @@ function TeaPage() {
   const [origin, setOrigin] = useState("")
   const [image, setImage] = useState("")
 
-  // Fetch request for TEA
   useEffect(() => {
     fetch("http://localhost:4000/teas")
       .then(resp => resp.json())
@@ -34,7 +33,6 @@ function TeaPage() {
     image: image
   }
 
-  // Post request for TEA
   fetch("http://localhost:4000/teas", {
       method: "POST",
       headers: {

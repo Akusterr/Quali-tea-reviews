@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 function Teacard( {UT} ) {
   const [herbal, setHerbal] = useState(true)
 
-  const handleHerbal = () => {
-    setHerbal(!herbal)
-  }
+  // const handleHerbal = () => {
+  //   setHerbal(!herbal)
+  // }
 
 
   return (

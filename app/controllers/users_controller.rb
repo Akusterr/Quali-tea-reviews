@@ -1,4 +1,4 @@
-
+require 'byebug'
 class UsersController < ApplicationController
 skip_before_action :authorize, only: :create
 
@@ -13,6 +13,12 @@ skip_before_action :authorize, only: :create
     end
 
     def create
+        # DO the following but in rubs then use userData to crate user instead of user_params
+        # userData = {
+        #     username: user_params.username,
+        #     location: user_params.location,
+        #     password_digest: sha256(user_params.password)
+        # }
        user = User.create!(user_params)
        session[:user_id] = user.id
        render json: user, status: :created
@@ -33,7 +39,7 @@ skip_before_action :authorize, only: :create
 
     private
     def user_params
-        params.permit(:username, :password)
+        params.permit(:username, :password, :location)
     end
 
 end

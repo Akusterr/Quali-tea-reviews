@@ -30,10 +30,6 @@ function LoginForm() {
     setLogin(user)
     window.location.href = 'http://localhost:4000/home'
   }
-
-
-
-  // window.location.href = "http://localhost:4000/home"
  
 
   return (
@@ -68,8 +64,6 @@ function LoginForm() {
           <div>
             Don't have an account yet? <Link exact to='/registration'>Sign up now!</Link>
           </div>
-
-          {/* <h1>Hi, {login.username}</h1> */}
    </div>
   );
 }

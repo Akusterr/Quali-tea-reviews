@@ -27,10 +27,6 @@ function Registration() {
         .then(console.log)
     }
 
-   
-  
-
-
 
   return (
     <div className="reg-form-wrapper">
